@@ -13,7 +13,7 @@ import { NavLink } from './NavLink'
 import { NavMenu } from './NavMenu'
 import { Submenu } from './Submenu'
 import { ToggleButton } from './ToggleButton'
-import { links } from './_data'
+import appConfig from '../../../configs/appConfig'
 
 const MobileNavContext = (props) => {
   const { isOpen, onToggle } = useDisclosure()
@@ -24,7 +24,7 @@ const MobileNavContext = (props) => {
           <ToggleButton isOpen={isOpen} onClick={onToggle} />
         </Box>
         <Box as="a" rel="home" mx="auto">
-          <Logo h="24px" iconColor="blue.500" />
+          <Logo h="24px" iconColor="primary.500" />
         </Box>
         <Box
           visibility={{
@@ -32,13 +32,13 @@ const MobileNavContext = (props) => {
             sm: 'visible',
           }}
         >
-          <Button as="a" colorScheme="blue">
+          <Button as="a" colorScheme="primary">
             Get Started
           </Button>
         </Box>
       </Flex>
       <NavMenu animate={isOpen ? 'open' : 'closed'}>
-        {links.map((link, idx) =>
+        {appConfig.links.map((link, idx) =>
           link.children ? (
             <Submenu.Mobile key={idx} link={link} />
           ) : (
@@ -47,8 +47,8 @@ const MobileNavContext = (props) => {
             </NavLink.Mobile>
           ),
         )}
-        <Button colorScheme="blue" w="full" size="lg" mt="5">
-          Try for free
+        <Button colorScheme="primary" w="full" size="lg" mt="5">
+          Sign In
         </Button>
       </NavMenu>
     </>
@@ -60,10 +60,10 @@ const DesktopNavContent = (props) => {
     <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
       <Box as="a" href="#" rel="home">
         <VisuallyHidden>Envelope</VisuallyHidden>
-        <Logo h="6" iconColor="blue.500" />
+        <Logo h="6" iconColor="primary.500" />
       </Box>
       <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
-        {links.map((link, idx) => (
+        {appConfig.links.map((link, idx) => (
           <Box as="li" key={idx} id={`nav__menuitem-${idx}`}>
             {link.children ? (
               <Submenu.Desktop link={link} />
@@ -74,11 +74,11 @@ const DesktopNavContent = (props) => {
         ))}
       </HStack>
       <HStack spacing="8" minW="240px" justify="space-between">
-        <Box as="a" href="#" color={mode('blue.600', 'blue.300')} fontWeight="bold">
+        <Box as="a" href="#" color={mode('primary.600', 'primary.300')} fontWeight="bold">
           Sign In
         </Box>
-        <Button as="a" href="#" colorScheme="blue" fontWeight="bold">
-          Sign up for free
+        <Button as="a" href="#" colorScheme="primary" fontWeight="bold">
+          Get Started
         </Button>
       </HStack>
     </Flex>

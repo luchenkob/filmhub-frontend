@@ -29,7 +29,7 @@ export const SubmenuItem = (props) => {
         w="10"
         h="10"
         fontSize="3xl"
-        color={mode('blue.600', 'blue.400')}
+        color={mode('primary.500', 'primary.400')}
       >
         {icon}
       </Center>
@@ -39,7 +39,7 @@ export const SubmenuItem = (props) => {
             fontWeight="semibold"
             color={mode('gray.900', 'white')}
             _groupHover={{
-              color: mode('blue.600', 'inherit'),
+              color: mode('primary.500', 'inherit'),
             }}
           >
             {title}
@@ -49,7 +49,7 @@ export const SubmenuItem = (props) => {
             as={FaChevronRight}
             transition="all 0.2s"
             _groupHover={{
-              color: mode('blue.600', 'inherit'),
+              color: mode('primary.500', 'inherit'),
               transform: 'translateX(2px)',
             }}
           />

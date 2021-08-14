@@ -17,10 +17,10 @@ const DesktopNavLink = React.forwardRef((props, ref) => {
         color: 'gray.500',
       }}
       _active={{
-        color: 'blue.600',
+        color: 'primary.600',
       }}
       _activeLink={{
-        color: 'blue.600',
+        color: 'primary.600',
         fontWeight: 'bold',
       }}
     />

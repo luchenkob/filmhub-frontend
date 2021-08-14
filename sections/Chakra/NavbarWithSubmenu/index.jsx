@@ -4,7 +4,7 @@ import { NavContent } from './NavContent'
 
 const App = () => {
   return (
-    <Box minH="640px">
+    <Box>
       <Box as="header" bg={mode('white', 'gray.800')} position="relative" zIndex="10">
         <Box
           as="nav"
