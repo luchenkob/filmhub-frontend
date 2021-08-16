@@ -1,9 +1,9 @@
-import { Box, Button, Heading, Text, DarkMode } from '@chakra-ui/react'
+import { Box, Button, Heading, Text, useColorModeValue as mode } from '@chakra-ui/react'
 import * as React from 'react'
 import Link from "next/link"
 
 const App = ({ data }) => (
-  <Box bg="gray.200" as="section">
+  <Box bg={mode('gray.200', 'gray.700')} as="section">
     <Box
       maxW="2xl"
       mx="auto"
@@ -18,12 +18,12 @@ const App = ({ data }) => (
       textAlign="center"
     >
       {data.title &&
-        <Heading as="h2" size="3xl" fontWeight="extrabold" letterSpacing="tight">
-          {data.title}
+        <Heading color={mode('gray.900', 'gray.200')} as="h2" size="3xl" fontWeight="extrabold" letterSpacing="tight" dangerouslySetInnerHTML={{ __html: data.title }}>
+          
         </Heading>
       }
       {data.description &&
-        <Text mt="4" fontSize="lg">{data.description}</Text>
+        <Text color={mode('gray.700', 'gray.200')} mt="4" fontSize="lg" dangerouslySetInnerHTML={{ __html: data.description }}></Text>
       }
       {data.button &&
         <Link href={data.button.link}>

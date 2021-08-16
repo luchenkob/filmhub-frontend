@@ -5,6 +5,10 @@ import Hero from "../sections/Chakra/WithScreenshotBelow"
 import Cta from "../sections/Chakra/CtaSimpleCentered"
 import CtaCall from "../sections/Chakra/CtaCallCenter"
 import Features from "../sections/Chakra/FeaturesWithTestimonial"
+import Newslater from "../sections/Chakra/Newsletter"
+import FeaturesOffset from "../sections/Chakra/FeaturesOffset"
+import { DarkMode } from '@chakra-ui/react'
+import Footer from "../sections/Chakra/FooterWithLogoBelow"
 
 const Home = ({ page }) => {
 
@@ -19,7 +23,11 @@ const Home = ({ page }) => {
       <Hero data={page.hero} />
       <CtaCall data={page.customers} />
       <Cta data={page.cta} />
-      <Features/>
+      <DarkMode><Features/></DarkMode>
+      <Newslater/>
+      <FeaturesOffset/>
+      <DarkMode><Cta data={page.ctaDistributors} /></DarkMode>
+      <DarkMode><Footer /></DarkMode>
     </>
   )
 }

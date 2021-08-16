@@ -91,6 +91,13 @@ export const pages = [
         {name: "PlayNow Media", img: "playnow-media.png"},
         {name: "FreebieTV", img: "freebie-tv.png"},
       ]
-    }
+    },
+    ctaDistributors: {
+      description: "<strong>DISTRIBUTORS & SALES AGENTS:</strong> Want to expand your distribution to new territories and channels?",
+      button: {
+        name: "Let's talk",
+        link: "#"
+      }
+    },
   },
 ]

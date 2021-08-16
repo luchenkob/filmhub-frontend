@@ -1,4 +1,4 @@
-import { Box, Heading, SimpleGrid, Stack, DarkMode } from '@chakra-ui/react'
+import { Box, Heading, SimpleGrid, Stack } from '@chakra-ui/react'
 import * as React from 'react'
 import { BiDirections, BiHappyBeaming } from 'react-icons/bi'
 import { FaGraduationCap, FaRegLifeRing } from 'react-icons/fa'
@@ -10,7 +10,6 @@ import Donut from "../../../components/Donut"
 const App = () => {
   return (
     <Box bg="gray.800" as="section" pb="24">
-      <DarkMode>
         <Box bg="gray.800" color="white" pt="24" pb="12rem">
           <Box
             maxW={{
@@ -107,7 +106,6 @@ const App = () => {
             <Testimonials />
           </Box>
         </Box>
-      </DarkMode>
     </Box>
   )
 }
