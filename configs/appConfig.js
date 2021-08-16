@@ -134,18 +134,6 @@ const app = {
       label: 'Privacy Policy',
       href: '#',
     },
-    {
-      label: 'Offer terms',
-      href: '#',
-    },
-    {
-      label: 'Legal notice',
-      href: '#',
-    },
-    {
-      label: 'Sitemap',
-      href: '#',
-    },
   ]
 };
 

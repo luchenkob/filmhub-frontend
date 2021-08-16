@@ -164,13 +164,43 @@ const App = () => (
             ))}
           </HStack>
         </Stack>
-        <Box>
-          <Text color={mode('gray.800', 'white')}>&copy; {new Date().getFullYear()} Envelope Inc</Text>
-          <Text mt="2" color={mode('gray.800', 'white')}>
-            Made with <Heart /> by Chakra Inc.
-          </Text>
-        </Box>
       </Flex>
+    </Box>
+    <Box py={4} bg={mode('gray.200', 'gray.900')}>
+      <Box 
+      display="flex"
+      alignItems="center"
+      maxW={{
+        base: 'xl',
+        md: '7xl',
+      }}
+        px={{
+          base: '6',
+          md: '8',
+        }}
+
+        mx="auto">
+        <Text color={mode('gray.800', 'gray.500')}>&copy; {new Date().getFullYear()}Filmhub</Text>
+        {appConfig.footerBottomLinks.map((link, idx) => (
+          <Box as="li" key={idx}>
+            <Box
+              as="a"
+              color={mode('gray.800', 'white')}
+              href={link.href}
+              _hover={{
+                textDecoration: 'underline',
+              }}
+            >
+              <span>{link.label}</span>
+              {link.badge && (
+                <Box as="span" ms="2">
+                  {link.badge}
+                </Box>
+              )}
+            </Box>
+          </Box>
+        ))}
+      </Box>
     </Box>
   </Box>
 )
