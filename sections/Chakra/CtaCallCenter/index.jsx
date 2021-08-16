@@ -31,7 +31,7 @@ const App = ({ data }) => {
               <Heading
                 size="2xl"
                 fontWeight="extrabold"
-                color={useColorModeValue('primary.500', 'primary.300')}
+                color={useColorModeValue('brand.500', 'brand.300')}
                 dangerouslySetInnerHTML={{ __html: data.title }}
               >
               </Heading>
@@ -72,8 +72,9 @@ const App = ({ data }) => {
             {data.list.map((item, i) => (
               <Box key={`di-${i}`} display="flex" alignItems="center" justifyContent="center" width="120px" height="80px" flexShrink="0">
                 <Image
-                  width={100}
-                  height={60}
+                  width="100px"
+                  height="60px"
+                  objectFit="contain"
                   src={`/img/${item.img}`}
                   alt={`${item.name}`}
                 />

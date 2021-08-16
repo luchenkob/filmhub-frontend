@@ -4,6 +4,7 @@ import appConfig from "../configs/appConfig"
 import Hero from "../sections/Chakra/WithScreenshotBelow"
 import Cta from "../sections/Chakra/CtaSimpleCentered"
 import CtaCall from "../sections/Chakra/CtaCallCenter"
+import Features from "../sections/Chakra/FeaturesWithTestimonial"
 
 const Home = ({ page }) => {
 
@@ -18,6 +19,7 @@ const Home = ({ page }) => {
       <Hero data={page.hero} />
       <CtaCall data={page.customers} />
       <Cta data={page.cta} />
+      <Features/>
     </>
   )
 }

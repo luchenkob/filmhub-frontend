@@ -24,7 +24,7 @@ const MobileNavContext = (props) => {
           <ToggleButton isOpen={isOpen} onClick={onToggle} />
         </Box>
         <Box as="a" rel="home" mx="auto">
-          <Logo h="24px" iconColor="primary.500" />
+          <Logo h="24px" iconColor="brand.500" />
         </Box>
         <Box
           visibility={{
@@ -32,7 +32,7 @@ const MobileNavContext = (props) => {
             sm: 'visible',
           }}
         >
-          <Button as="a" colorScheme="primary">
+          <Button as="a" colorScheme="brand">
             Get Started
           </Button>
         </Box>
@@ -47,7 +47,7 @@ const MobileNavContext = (props) => {
             </NavLink.Mobile>
           ),
         )}
-        <Button colorScheme="primary" w="full" size="lg" mt="5">
+        <Button colorScheme="brand" w="full" size="lg" mt="5">
           Sign In
         </Button>
       </NavMenu>
@@ -60,7 +60,7 @@ const DesktopNavContent = (props) => {
     <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
       <Box as="a" href="#" rel="home">
         <VisuallyHidden>Envelope</VisuallyHidden>
-        <Logo h="6" iconColor="primary.500" />
+        <Logo h="6" iconColor="brand.500" />
       </Box>
       <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
         {appConfig.links.map((link, idx) => (
@@ -74,10 +74,10 @@ const DesktopNavContent = (props) => {
         ))}
       </HStack>
       <HStack spacing="8" minW="240px" justify="space-between">
-        <Box as="a" href="#" color={mode('primary.600', 'primary.300')} fontWeight="bold">
+        <Box as="a" href="#" color={mode('brand.600', 'brand.300')} fontWeight="bold">
           Sign In
         </Box>
-        <Button as="a" href="#" colorScheme="primary" fontWeight="bold">
+        <Button as="a" href="#" colorScheme="brand" fontWeight="bold">
           Get Started
         </Button>
       </HStack>

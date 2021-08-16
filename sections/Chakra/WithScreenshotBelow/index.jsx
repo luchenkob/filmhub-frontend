@@ -71,7 +71,7 @@ const App = ({ data }) => {
                     as="a"
                     href="#"
                     size="lg"
-                    colorScheme="primary"
+                    colorScheme="brand"
                     px="8"
                     margin="0 10px"
                     fontWeight="bold"

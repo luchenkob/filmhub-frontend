@@ -27,7 +27,7 @@ const App = ({ data }) => (
       }
       {data.button &&
         <Link href={data.button.link}>
-          <Button mt="8" as="a" size="lg" colorScheme="primary" fontWeight="bold">
+          <Button mt="8" as="a" size="lg" colorScheme="brand" fontWeight="bold">
             {data.button.name}
           </Button>
         </Link>
