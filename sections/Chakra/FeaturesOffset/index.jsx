@@ -41,7 +41,10 @@ const App = () => {
 
     <Flex
       bg={useColorModeValue("gray.200", "gray.600")}
-      p={20}
+      p={{
+        base: 4,
+        md: 20
+      }}
       w="auto"
       justifyContent="center"
       alignItems="center"
