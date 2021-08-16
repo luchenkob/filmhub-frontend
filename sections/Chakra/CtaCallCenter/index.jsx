@@ -2,6 +2,7 @@ import { Box, Flex, Heading, HStack, Img, Stack, Text, useColorModeValue } from 
 import * as React from 'react'
 import { MdGroup, MdPermPhoneMsg } from 'react-icons/md'
 import Image from "next/image"
+import styles from './animation.module.scss'
 
 const App = ({ data }) => {
   return (
@@ -16,7 +17,6 @@ const App = ({ data }) => {
           base: '6',
           md: '8',
         }}
-        py="12"
       >
         <Flex
           align="center"
@@ -62,24 +62,68 @@ const App = ({ data }) => {
             flex="1"
             maxW="560px"
             overflow="hidden"
-            display="flex"
-            flexWrap="wrap"
             h={{
               base: '400px',
               md: '460px',
             }}
           >
-            {data.list.map((item, i) => (
-              <Box key={`di-${i}`} display="flex" alignItems="center" justifyContent="center" width="120px" height="80px" flexShrink="0">
-                <Image
-                  width="100px"
-                  height="60px"
-                  objectFit="contain"
-                  src={`/img/${item.img}`}
-                  alt={`${item.name}`}
-                />
-              </Box>
-            ))}
+            <Box className={`${styles.animation}`} display="flex" flexWrap="wrap">
+              {data.list.map((item, i) => (
+                <Box key={`di-${i}`} display="flex" alignItems="center" justifyContent="center" width="120px" height="80px" flexShrink="0">
+                  <Image
+                    width="100px"
+                    height="60px"
+                    objectFit="contain"
+                    src={`/img/${item.img}`}
+                    alt={`${item.name}`}
+                  />
+                </Box>
+              ))}
+              {data.list.map((item, i) => (
+                <Box key={`d2i-${i}`} display="flex" alignItems="center" justifyContent="center" width="120px" height="80px" flexShrink="0">
+                  <Image
+                    width="100px"
+                    height="60px"
+                    objectFit="contain"
+                    src={`/img/${item.img}`}
+                    alt={`${item.name}`}
+                  />
+                </Box>
+              ))}
+              {data.list.map((item, i) => (
+                <Box key={`d3i-${i}`} display="flex" alignItems="center" justifyContent="center" width="120px" height="80px" flexShrink="0">
+                  <Image
+                    width="100px"
+                    height="60px"
+                    objectFit="contain"
+                    src={`/img/${item.img}`}
+                    alt={`${item.name}`}
+                  />
+                </Box>
+              ))}
+              {data.list.map((item, i) => (
+                <Box key={`d4i-${i}`} display="flex" alignItems="center" justifyContent="center" width="120px" height="80px" flexShrink="0">
+                  <Image
+                    width="100px"
+                    height="60px"
+                    objectFit="contain"
+                    src={`/img/${item.img}`}
+                    alt={`${item.name}`}
+                  />
+                </Box>
+              ))}
+              {data.list.map((item, i) => (
+                <Box key={`d5i-${i}`} display="flex" alignItems="center" justifyContent="center" width="120px" height="80px" flexShrink="0">
+                  <Image
+                    width="100px"
+                    height="60px"
+                    objectFit="contain"
+                    src={`/img/${item.img}`}
+                    alt={`${item.name}`}
+                  />
+                </Box>
+              ))}
+            </Box>
           </Box>
         </Flex>
       </Box>
