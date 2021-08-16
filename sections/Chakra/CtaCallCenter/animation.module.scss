@@ -1,7 +1,7 @@
 .animation {
   transform: translate3d(0, 0, 0);
-  -webkit-animation: vertical-scroll 30s linear infinite;
-  animation: vertical-scroll 30s linear infinite;
+  -webkit-animation: vertical-scroll 60s linear infinite;
+  animation: vertical-scroll 60s linear infinite;
 }
 
 @keyframes vertical-scroll {
