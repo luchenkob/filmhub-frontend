@@ -62,7 +62,7 @@ export const Testimonial = (props) => {
             }}
             rounded="full"
           />
-          <Box marginInlineStart="0 !important">
+          <Box marginInlineStart={{base: "6", md: "0 !important"}}>
             <Text
               as="cite"
               fontStyle="normal"

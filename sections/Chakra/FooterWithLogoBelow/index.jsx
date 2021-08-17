@@ -168,7 +168,8 @@ const App = () => (
     </Box>
     <Box py={4} bg={mode('gray.200', 'gray.900')}>
       <Box 
-      display="flex"
+      display={{base: "block", md: "flex"}}
+      textAlign={{base: "center", md: "left"}}
       alignItems="center"
       maxW={{
         base: 'xl',
@@ -180,9 +181,9 @@ const App = () => (
         }}
 
         mx="auto">
-        <Text color={mode('gray.800', 'gray.500')}>&copy; {new Date().getFullYear()} Filmhub</Text>
+        <Text mr={{base: "0", md: 4}} color={mode('gray.800', 'gray.500')}>&copy; {new Date().getFullYear()} Filmhub</Text>
         {appConfig.footerBottomLinks.map((link, idx) => (
-          <Box as="li" key={idx}>
+          <Box mx={4} key={idx}>
             <Box
               as="a"
               color={mode('gray.800', 'white')}

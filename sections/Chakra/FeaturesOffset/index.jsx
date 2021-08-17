@@ -58,6 +58,7 @@ const App = () => {
       >
         <SimpleGrid
           alignItems="center"
+          display={{base: "block", md: "grid"}}
           columns={{ base: 1, lg: 3 }}
           spacingY={{ base: 10, lg: 32 }}
           spacingX={{ base: 10, lg: 24 }}
@@ -68,6 +69,7 @@ const App = () => {
               fontWeight="semibold"
               textTransform="uppercase"
               letterSpacing="wide"
+              textAlign={{base: "center", md: "left"}}
             >
               Everything you need
             </chakra.h2>
@@ -92,7 +94,7 @@ const App = () => {
               List your completed films, series, and shorts for free so streaming services can discover and license your work.
             </chakra.p>
             <chakra.p
-              mb={6}
+              mb={{ base: "10", md: "6" }}
               fontSize={{ base: "lg", md: "xl" }}
               textAlign={{ base: "center", sm: "left" }}
               color={useColorModeValue("gray.600", "gray.500")}
