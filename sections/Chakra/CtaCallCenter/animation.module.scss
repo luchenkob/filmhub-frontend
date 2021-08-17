@@ -1,7 +1,19 @@
 .animation {
   transform: translate3d(0, 0, 0);
-  -webkit-animation: vertical-scroll 60s linear infinite;
-  animation: vertical-scroll 60s linear infinite;
+  -webkit-animation: vertical-scroll 50s linear infinite;
+  animation: vertical-scroll 50s linear infinite;
+
+  @media only screen and (max-width: 720px) {
+    -webkit-animation: vertical-scroll 100s linear infinite;
+    animation: vertical-scroll 100s linear infinite;
+  }
+}
+
+.img {
+  @media only screen and (max-width: 720px) {
+    width: 80px !important;
+    height: 50px !important;
+  }
 }
 
 @keyframes vertical-scroll {
@@ -9,6 +21,6 @@
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(0, -79%, 0);
+    transform: translate3d(0, -78.3%, 0);
   }
 }

@@ -71,15 +71,19 @@ const App = ({ data }) => {
                     as="a"
                     href="#"
                     size="lg"
+                    display="inline-flex"
+                    position="relative"
                     colorScheme="brand"
                     px="8"
                     margin="0 10px"
                     fontWeight="bold"
                     fontSize="md"
                   >
-                    Get started
+                    <Box textAlign="center">
+                      <Text>Get started</Text>
+                      <Text fontSize="12px" fontWeight="400" opacity="0.6" textAlign="center">( it's free )</Text>
+                    </Box>
                   </Button>
-                  <Text fontSize="sm" opacity="0.6" textAlign="center">( it's free )</Text>
                 </Box>
                 <Box>
                   <Button
@@ -103,10 +107,10 @@ const App = ({ data }) => {
           <Swiper {...options}>
             {data.posters.map((item, i) => (
               <SwiperSlide style={{ width: 'auto' }} key={`ci-${i}`}>
-                <Box border="4px solid white" width={225}>
+                <Box border="4px solid white" width={150}>
                   <Image
-                    width={225}
-                    height={300}
+                    width={150}
+                    height={200}
                     objectFit="cover"
                     layout="responsive"
                     src={`/img/${item.img}`}
@@ -114,7 +118,7 @@ const App = ({ data }) => {
                   />
                   {item.isNew && <Box position="absolute" top="20px" right="-22px"><Badge px="3" py="1" ml="1" colorScheme="green">New</Badge></Box>}
                   <Box py="3" bg="white">
-                    <Text textTransform="uppercase" align="center" color={item.color}>{item.name}</Text>
+                    <Text fontSize="13px" textTransform="uppercase" align="center" color={item.color}>{item.name}</Text>
                   </Box>
                 </Box>
               </SwiperSlide>
@@ -122,7 +126,7 @@ const App = ({ data }) => {
           </Swiper>
         </Box>
         <Box margin={`auto`} maxW={1200}>
-          <Text opacity="0.5" fontWeight="300" textAlign="center" fontSize="lg" mt="4" mx="auto">
+          <Text opacity="0.7" fontWeight="300" textAlign="center" fontSize="xl" mt="10" mx="auto">
             Join thousands of global filmmakers distributing their films to 100+ streaming channels
           </Text>
         </Box>

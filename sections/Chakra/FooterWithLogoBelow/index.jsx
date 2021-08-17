@@ -180,7 +180,7 @@ const App = () => (
         }}
 
         mx="auto">
-        <Text color={mode('gray.800', 'gray.500')}>&copy; {new Date().getFullYear()}Filmhub</Text>
+        <Text color={mode('gray.800', 'gray.500')}>&copy; {new Date().getFullYear()} Filmhub</Text>
         {appConfig.footerBottomLinks.map((link, idx) => (
           <Box as="li" key={idx}>
             <Box

@@ -4,7 +4,7 @@ import appConfig from "../configs/appConfig"
 import Hero from "../sections/Chakra/WithScreenshotBelow"
 import Cta from "../sections/Chakra/CtaSimpleCentered"
 import CtaCall from "../sections/Chakra/CtaCallCenter"
-import Features from "../sections/Chakra/FeaturesWithTestimonial"
+import Features from "../sections/Chakra/TabsWithIcon"
 import Newslater from "../sections/Chakra/Newsletter"
 import FeaturesOffset from "../sections/Chakra/FeaturesOffset"
 import { DarkMode } from '@chakra-ui/react'
